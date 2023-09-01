@@ -2,6 +2,7 @@ import getSingleUSer from '@/lib/getSingleUser';
 import getUserPosts from '@/lib/getUserPosts';
 import { UserPosts } from './components/UserPosts';
 import { Suspense } from 'react';
+import { Metadata } from 'next';
 
 type Params = {
   params: {
@@ -9,10 +10,22 @@ type Params = {
   };
 };
 
+export async function generateMetadata({
+  params: { userId },
+}: Params): Promise<Metadata> {
+  const userData: Promise<User> = getSingleUSer(userId);
+  const user: User = await userData;
+
+  return {
+    title: `Users | ${user.name}`,
+    description: `This is the page of ${user.name}`,
+  };
+}
+
 const UserPage = async ({ params: { userId } }: Params) => {
-  const userData: Promise<User> =  getSingleUSer(userId);
-  const userPostsData: Promise<Post[]> =  getUserPosts(userId);
-  const user = await userData;
+  const userData: Promise<User> = getSingleUSer(userId);
+  const userPostsData: Promise<Post[]> = getUserPosts(userId);
+  const user: User = await userData;
 
   return (
     <section>

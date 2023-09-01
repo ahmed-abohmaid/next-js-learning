@@ -3,7 +3,7 @@ type UserPostsProps = {
 };
 
 export const UserPosts = async ({ promise }: UserPostsProps) => {
-  const posts = await promise;
+  const posts: Post[] = await promise;
 
   return posts.map((post) => (
     <article key={post.id}>
