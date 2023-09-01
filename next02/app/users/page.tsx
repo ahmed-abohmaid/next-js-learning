@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const page = async () => {
   const usersData: Promise<User[]> = getAllUsers();
-  const users = await usersData;
+  const users:User[] = await usersData;
   return (
     <section>
       <h2>

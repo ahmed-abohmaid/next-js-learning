@@ -4,7 +4,7 @@ export default async function getSingleUSer(userId: string) {
   );
 
   if (!res.ok) {
-    throw new Error('Faild to fetch data');
+    return;
   }
 
   return res.json();
