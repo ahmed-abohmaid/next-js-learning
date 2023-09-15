@@ -9,7 +9,6 @@ export default function Navbar() {
           <Link
             href="/"
             className="text-white/90 no-underline hover:text-white"
-            target="_blank"
           >
             Ahmed Ramadan
           </Link>
