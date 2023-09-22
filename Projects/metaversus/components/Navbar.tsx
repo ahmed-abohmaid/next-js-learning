@@ -13,9 +13,9 @@ export default function Navbar() {
       viewport={{ once: true}}
       className={`${styles.xPaddings} py-8 relative`}
     >
-      <div className="absolute w-[50%] inset-0 gradient-01 -z-10" />
+      <div className="absolute w-[40%] h-[150px] inset-0 gradient-01 -z-10" />
       <div
-        className={`${styles.innerWidth} mx-auto flex justify-between gap-8`}
+        className={`${styles.innerWidth} mx-auto flex justify-between gap-8 relative`}
       >
         <Image
           src="/search.svg"

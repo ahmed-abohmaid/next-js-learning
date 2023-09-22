@@ -16,12 +16,12 @@
     hsl(295deg 76% 51%) 0%,
     hsl(284deg 70% 73%) 26%,
     hsl(257deg 70% 86%) 39%,
-    hsl(202deg 92% 90%) 50%,
+    hsl(202deg 95% 95%) 50%,
     hsl(215deg 77% 81%) 61%,
     hsl(221deg 73% 70%) 74%,
     hsl(220deg 76% 51%) 100%
   );
-  filter: blur(70px);
+  filter: blur(60px);
 }
 
 .hero-gradient {
@@ -39,9 +39,14 @@
   height: 438px;
   top: 0px;
   right: 0px;
-
-  background: #7aebfb;
-  filter: blur(190px);
+  background-image: linear-gradient(
+    #2565E1 15%,
+    #d225e1 53.65%,
+    hsl(221deg 73% 70%) 60%,
+    #7aebfb 100%
+  );
+  filter: blur(90px);
+  border-radius: 400px;
 }
 
 .glassmorphism {
@@ -58,7 +63,6 @@
   height: 800px;
   left: 20%;
   top: 5%;
-
   background: rgba(149, 66, 232, 0.35);
   filter: blur(175px);
   transform: rotate(-114.2deg);
