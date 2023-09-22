@@ -21,7 +21,7 @@
     hsl(221deg 73% 70%) 74%,
     hsl(220deg 76% 51%) 100%
   );
-  filter: blur(60px);
+  filter: blur(80px);
 }
 
 .hero-gradient {
@@ -36,16 +36,32 @@
 .gradient-02 {
   position: absolute;
   width: 200px;
-  height: 438px;
-  top: 0px;
+  height: 500px;
+  top: -10px;
   right: 0px;
-  background-image: linear-gradient(
-    #2565E1 15%,
-    #d225e1 53.65%,
-    hsl(221deg 73% 70%) 60%,
-    #7aebfb 100%
+  background: linear-gradient(
+    0deg,
+    rgba(122, 235, 251, 1) 35%,
+    rgba(210, 37, 225, 1) 50%,
+    rgba(37, 101, 225, 1) 67%
   );
-  filter: blur(90px);
+  filter: blur(110px);
+  border-radius: 400px;
+}
+
+.explore-gradient {
+  position: absolute;
+  width: 200px;
+  height: 600px;
+  top: 30%;
+  left: 0px;
+  background: linear-gradient(
+    180deg,
+    rgba(122, 235, 251, 1) 30%,
+    rgba(210, 37, 225, 1) 25%,
+    rgba(37, 101, 225, 1) 67%
+  );
+  filter: blur(110px);
   border-radius: 400px;
 }
 

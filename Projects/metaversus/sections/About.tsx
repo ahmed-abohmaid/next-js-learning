@@ -3,7 +3,7 @@
 import styles from '@/styles';
 import { motion } from 'framer-motion';
 import { fadeIn, staggerContainer, bouncing } from '@/utils/motion.js';
-import TypingText from '@/components/CustomTexts';
+import { TypingText } from '@/components/CustomTexts';
 
 export default function About() {
   return (

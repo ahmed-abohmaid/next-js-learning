@@ -1,12 +1,17 @@
 import { motion } from 'framer-motion';
 import { textContainer, textVariant2 } from '@/utils/motion.js';
 
-type Props = {
+type TypingTextProps = {
   title: string;
   textStyles: string;
 };
 
-export default function TypingText({ title, textStyles }: Props) {
+type TitleTextProps = {
+  title: string | JSX.Element;
+  textStyles: string;
+};
+
+export function TypingText({ title, textStyles }: TypingTextProps) {
   return (
     <motion.p
       variants={textContainer}
@@ -20,3 +25,14 @@ export default function TypingText({ title, textStyles }: Props) {
     </motion.p>
   );
 }
+
+export const TitleText = ({ title, textStyles }: TitleTextProps) => (
+  <motion.h2
+    variants={textVariant2}
+    initial="hidden"
+    whileInView="show"
+    className={`mt-[8px] font-bold md:text-[64px] text-[30px] text-white ${textStyles}`}
+  >
+    {title}
+  </motion.h2>
+);
