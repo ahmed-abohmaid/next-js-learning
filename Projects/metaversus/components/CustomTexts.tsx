@@ -3,12 +3,12 @@ import { textContainer, textVariant2 } from '@/utils/motion.js';
 
 type TypingTextProps = {
   title: string;
-  textStyles: string;
+  textStyles?: string;
 };
 
 type TitleTextProps = {
   title: string | JSX.Element;
-  textStyles: string;
+  textStyles?: string;
 };
 
 export function TypingText({ title, textStyles }: TypingTextProps) {

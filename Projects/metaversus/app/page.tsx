@@ -1,5 +1,6 @@
 import About from '@/sections/About';
 import Explore from '@/sections/Explore';
+import GetStarted from '@/sections/GetStarted';
 import Hero from '@/sections/Hero';
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <About />
       <Explore />
+      <GetStarted />
     </main>
   );
 }

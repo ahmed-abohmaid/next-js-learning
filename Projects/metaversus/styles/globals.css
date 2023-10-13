@@ -75,13 +75,15 @@
 
 .gradient-03 {
   position: absolute;
-  width: 404px;
-  height: 800px;
-  left: 20%;
-  top: 5%;
-  background: rgba(149, 66, 232, 0.35);
-  filter: blur(175px);
+  background-color: #9441e759;
+  border-radius: 252px/618.4px;
+  filter: blur(250px);
+  height: 1237px;
+  left: 0;
+  position: fixed;
+  top: 0;
   transform: rotate(-114.2deg);
+  width: 504px;
 }
 
 .gradient-04 {
