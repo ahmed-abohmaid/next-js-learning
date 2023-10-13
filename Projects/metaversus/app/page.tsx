@@ -10,8 +10,11 @@ export default function Home() {
       <Hero />
       <About />
       <Explore />
-      <GetStarted />
-      <WhatIsNew />
+      <div className="relative">
+        <GetStarted />
+        <div className="gradient-04 z-0" />
+        <WhatIsNew />
+      </div>
     </main>
   );
 }

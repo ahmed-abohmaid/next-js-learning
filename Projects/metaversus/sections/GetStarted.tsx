@@ -24,7 +24,13 @@ export default function GetStarted() {
           whileInView="show"
           className="flex-1 flex justify-center items-center"
         >
-          <Image width={500} height={600} src="/get-started.png" alt="planet" className="w-[90%] h-[90%] object-contain" />
+          <Image
+            width={500}
+            height={600}
+            src="/get-started.png"
+            alt="planet"
+            className="w-[90%] h-[90%] object-contain"
+          />
         </motion.div>
         <motion.div
           variants={fadeIn('left', 'tween', 0.2, 1)}
