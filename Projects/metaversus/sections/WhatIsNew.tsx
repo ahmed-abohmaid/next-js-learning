@@ -4,11 +4,11 @@ import styles from '@/styles';
 import { motion } from 'framer-motion';
 import { staggerContainer, fadeIn, planetVariants } from '@/utils/motion.js';
 import { TitleText, TypingText } from '@/components/CustomTexts';
-import { startingFeatures } from '@/constants';
+import { newFeatures } from '@/constants';
 import Image from 'next/image';
-import StartSteps from '@/components/StartSteps';
+import NewFeatures from '@/components/NewFeatures';
 
-export default function GetStarted() {
+export default function WhatIsNew() {
   return (
     <section className={`${styles.paddings} relative z-10`}>
       <motion.div
@@ -19,38 +19,44 @@ export default function GetStarted() {
         className={`${styles.innerWidth} mx-auto flex lg:flex-row flex-col gap-8`}
       >
         <motion.div
-          variants={planetVariants('left')}
-          initial="hidden"
-          whileInView="show"
-          className="flex-1 flex justify-center items-center"
-        >
-          <Image width={500} height={600} src="/get-started.png" alt="planet" className="w-[90%] h-[90%] object-contain" />
-        </motion.div>
-        <motion.div
           variants={fadeIn('left', 'tween', 0.2, 1)}
           initial="hidden"
           whileInView="show"
-          className="flex-[0.75] max-w-[471px] flex-col justify-start"
+          className="flex-[0.95] flex justify-center flex-col"
         >
-          <TypingText title="| How Metaverus Works" />
-          <TitleText title="Get started with just a few clicks" />
+          <TypingText title="| Whats New?" />
+          <TitleText title="What's new about Metaversus?" />
           <motion.div
             variants={staggerContainer()}
             initial="hidden"
             whileInView="show"
-            className="mt-[24px] flex gap-[24px] flex-col"
+            className="mt-[48px] flex flex-wrap justify-between gap-[24px]"
           >
-            {startingFeatures.map((feature, i) => (
+            {newFeatures.map((feature, i) => (
               <motion.div
                 variants={fadeIn('up', 'tween', 0.2, 1)}
-                key={i + 1}
+                key={feature.title}
                 initial="hidden"
                 whileInView="show"
               >
-                <StartSteps number={i + 1} text={feature} />
+                <NewFeatures {...feature} />
               </motion.div>
             ))}
           </motion.div>
+        </motion.div>
+        <motion.div
+          variants={planetVariants('right')}
+          initial="hidden"
+          whileInView="show"
+          className="flex-1 flex justify-center items-center"
+        >
+          <Image
+            width={500}
+            height={600}
+            src="/whats-new.png"
+            alt="planet"
+            className="w-[90%] h-[90%] object-contain"
+          />
         </motion.div>
       </motion.div>
     </section>
